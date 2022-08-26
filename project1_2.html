@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Hotel reservation form</h1>
+    <hr />
+    <form action="forms/user.php" method="get">
+    <!-- Personal Information -->
+    <fieldset>
+      <legend><b> Personal informatin</b></legend>
+      <label for="fullname">Fullname</label><br />
+      <input required placeholder="Name" type="text" name="name" id="" />
+      <input
+        required
+        placeholder="LastName"
+        type="text"
+        name="lastname"
+        id=""
+      /><br />
+      <label for="sex">Male</label><input type="radio" name="sex" id="" /><label
+        for="sex"
+        >Female</label
+      ><input type="radio" name="sex" id="" /><br />
+
+      <label for="id card">Applicant ID card</label><br />
+      <input required type="file" name="idcard" id="" /><br />
+      <label for="Communication">Communication</label><br />
+      <table>
+        <tr>
+          <td>
+            <label for="gmail">Email : </label>
+            <input
+              placeholder="example@gmail.com"
+              type="email"
+              name="gmail"
+              id=""
+            />
+          </td>
+          <td><img height="20px" src="./mapsa/gmail_icon.webp" alt="" /></td>
+          <td>
+            <label for="" tel>Phone Number : </label>
+            <input placeholder="+980123456789" type="tel" name="tel" id="" />
+          </td>
+          <td>
+            <img height="20px" src="./mapsa/whatsapp_icon.webp" alt="" /><br />
+          </td>
+        </tr>
+      </table>
+      <label for="address">Address</label><br />
+      <textarea
+        placeholder="Address..."
+        name=""
+        id=""
+        cols="30"
+        rows="3"
+      ></textarea>
+    </fieldset>
+    <hr />
+    <!-- Reservation Information -->
+    <fieldset>
+      <legend><b>Reservation Information</b></legend>
+      <label for="Companion">Companions : </label
+      ><input
+        required
+        type="number"
+        min="0"
+        max="5"
+        name="Companion"
+        id=""
+      /><br />
+
+      <label for="other">Companion Information</label><br /><input
+        type="button"
+        value="+"
+      />
+      <br />
+      <table><tr>
+      <td><label for="room">Rooms </label></td>
+      <td><input required min="1" max="4" type="number" name="rooms" id="" /></td>
+      <td><label for="view"> View </label
+      ></td><td><select name="view" id="">
+        <option selected disabled value="view">view</option>
+
+        <option value="sea">sea</option>
+        <option value="jungle">jungle</option></td></select
+      ></tr></table>
+      <label for="options">Options : </label>
+      <label for="bathroom">Bathroom</label
+      ><input type="checkbox" name="bathroom" id="" /> <label for="TV">TV</label
+      ><input type="checkbox" name="TV" id="" />
+      <label for="refrigerator">Refrigerator</label
+      ><input type="checkbox" name="refrigerator" id="" /><br />
+      <label for="arrival">Arrival : </label
+      ><input required type="datetime-local" name="arrival" id="" />
+      <label for="Departure">Departure : </label
+      ><input required type="datetime-local" name="departure" id="" />
+    </fieldset>
+    <hr />
+    <input type="submit" value="Submit">
+    <input type="reset" value="Reset" />
+    </form>
+  </body>
+</html>
